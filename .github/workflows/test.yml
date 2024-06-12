@@ -1,10 +1,9 @@
 name : test workflow
-on:
-  push
+on: push
 jobs: 
   runs on: ubuntu-latest
-    steps: 
-      -name : new
-       run : |
-       echo "heloo"
-       echo "hi"
+  steps: 
+    -name : new
+     run : |
+      echo "heloo"
+      echo "hi"
