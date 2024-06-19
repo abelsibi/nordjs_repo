@@ -1,12 +1,12 @@
-name: Test project
-on: push
-jobs: 
-  test: 
-    runs-on: ubuntu-latest
-    steps: 
-      - name: run code
-        uses: actions/checkout@v4
-      - name: setup nodejs
-        uses: actions/setup-node@v3
-        with:
-         node-version: 18
+name: Test workflow
+on: workflow-dispatch
+jobs:
+name: job1
+  runs-on: ubuntu-latest
+  steps:
+    - name: code copy
+      uses: actions/checkout@v3
+    - name: nordjs install
+      uses: actions/setup-nord@v3
+      with: 
+        node-version: 18
