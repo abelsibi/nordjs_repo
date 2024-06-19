@@ -1,13 +1,14 @@
 name: Test workflow
-on: workflow-dispatch
+on: 
+  workflow_dispatch
 jobs:
   job1:
-    name: job1
     runs-on: ubuntu-latest
     steps:
       - name: code copy
         uses: actions/checkout@v3
       - name: nordjs install
-        uses: actions/setup-nord@v3
+        uses: actions/setup-node@v3
         with: 
-          node-version: 18
+          node-version: '18'
+
