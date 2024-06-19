@@ -1,7 +1,7 @@
 name: Test workflow
 on: workflow_dispatch
 jobs:
-  test:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: code copy
@@ -10,3 +10,4 @@ jobs:
         uses: actions/setup-nord@v3
         with: 
           node-version: 18
+
