@@ -1,7 +1,7 @@
 name: Test workflow
 on: workflow-dispatch
 jobs:
-name: job1
+  name: job1
   runs-on: ubuntu-latest
   steps:
     - name: code copy
