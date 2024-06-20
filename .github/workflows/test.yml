@@ -1,4 +1,4 @@
-name: Test workflow and deploy
+name: Test and deploy website
 on: 
   workflow_dispatch : 
   push :
