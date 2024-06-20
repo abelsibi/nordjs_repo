@@ -31,5 +31,6 @@ jobs:
         run: npm run build
       - name: deploy
         run: echo "deploying......"
+        #fmdfndnf,m
 
 
