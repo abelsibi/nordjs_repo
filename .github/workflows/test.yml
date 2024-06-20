@@ -30,7 +30,7 @@ jobs:
       - name: build project
         run: npm run build
       - name: deploy
-        run: echo "deploying......"
-        #fmdfndnf,m
+        run: echo "deploying...... deployed"
+       
 
 
