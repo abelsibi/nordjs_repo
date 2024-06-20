@@ -17,7 +17,6 @@ jobs:
       - name: runtest
         run: npm test
   deploy:
-    needs: Test
     runs-on: ubuntu-latest
     steps:
       - name: code copy
@@ -32,6 +31,11 @@ jobs:
         run: npm run build
       - name: deploy
         run: echo "deploying...... deployed"
-       
+  demo:
+    needs: [Test,deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: demo
+        run: echo"demo job"   
 
 
