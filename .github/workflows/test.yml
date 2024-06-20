@@ -1,8 +1,8 @@
-name: Test workflow
+name: Test workflow and deploy
 on: 
   workflow_dispatch
 jobs:
-  job1:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - name: code copy
@@ -15,4 +15,20 @@ jobs:
         run: npm ci
       - name: runtest
         run: npm test
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code copy
+        uses: actions/checkout@v3
+      - name: nordjs install
+        uses: actions/setup-node@v3
+        with: 
+          node-version: '18'
+      - name: install dependencies
+        run: npm ci
+      - name: build project
+        run: npm run build
+      - name: deploy
+        run: echo "deploying......"
+
 
