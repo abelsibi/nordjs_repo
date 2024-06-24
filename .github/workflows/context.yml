@@ -1,8 +1,8 @@
 name: new
-on : [push,workflow_dispatch]
+on : [push , workflow_dispatch]
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - name : context object
-        run: echo"${{tojson(github)}}"
+        run: echo "${{tojson(github)}}"
