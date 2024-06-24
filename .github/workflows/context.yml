@@ -1,8 +1,8 @@
-name: new
-on : [push , workflow_dispatch]
+name: context workflow
+on: [push,workflow-dispatch]
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name : context object
-        run: echo "${{tojson(github)}}"
+      - name: getting context info
+        run: echo "${{toJSON(github)}}"
